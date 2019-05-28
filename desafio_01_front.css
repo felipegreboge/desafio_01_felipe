@@ -49,6 +49,40 @@ body{
     background:#f6f5f5da;
 }
 
+.blocodetarefasl{
+    position: absolute;
+    border: 3px solid rgb(0, 0, 0);
+    font-size: 14px;
+    text-align: right;
+    top: 10px;
+    right:40px;
+    color: #33313b;
+    position: relative;
+    margin: auto;
+    width: 280px;
+    height: 165px;
+    border-radius:5px;
+    background:#f6f5f5da;
+    text-align: center;
+    align-content: center;
+}
+
+.blocodetarefasr{
+    position: absolute;
+    border: 3px solid rgb(0, 0, 0);
+    font-size: 14px;
+    text-align: right;
+    top: -161px;
+    right: -147.5px;
+    color: #33313b;
+    position: relative;
+    margin: auto;
+    width: 65px;
+    height: 165px;
+    border-radius:5px;
+    background:#f6f5f5da;
+}
+
 .botaoenviotarefa{
     position: absolute;
     right: 25%;
@@ -72,9 +106,9 @@ body{
 }
 
 .botaolimpartarefa{
-    position: absolute;
-    right: 25%;
-    top:105%;
+    position: relative;
+    top: -155px;
+    left: 80px;
     width: 200px;
     text-align: center;
     background-color: #f6f5f5da;
@@ -93,22 +127,12 @@ body{
     box-shadow: 0 0px 0px 0 #33313b, 0 0px 20px 0 #33313b
 }
 
-/* .checkpos{
-    width: 20px;
-    height: 15px;
-    padding: 0;
-    margin:0;
-    vertical-align: middle;
-    position: relative;
-    top: -1px;
-    *overflow: hidden;
-} */
-
 .textotarefasfeitas{
+    vertical-align: top;
     position: relative;
     color: #33313b;
-    text-align: right;
-    right: 0px;
+    text-align: left;
+    right: -5px;
 }
 
 .checkpos{
@@ -151,10 +175,10 @@ body{
 	border: 1px solid #a3a2a1;
 	box-shadow: 0 1px 1px rgba(0,0,0,0.05), inset 0px -15px 5px -12px rgba(0,0,0,0.05);
 	padding: 7px;
-	border-radius: 2px;
+    border-radius: 2px;
     display: inline-block;
     vertical-align: middle;
-	position: relative;
+    position: relative;
 }
 
 .checkpos2:active, .checkpos:checked:active {
@@ -177,4 +201,15 @@ body{
 	top: -2px;
 	left: 2px;
 	color: #0ea700;
+}
+
+.statuscheck{
+    position: relative;
+    color: #33313b;
+    text-align: right;
+    right: 0px;
+    margin-left: 0px;
+    vertical-align: top;
+    position: middle;
+    right: 10px;
 }

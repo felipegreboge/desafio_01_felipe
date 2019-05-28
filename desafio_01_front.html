@@ -56,19 +56,26 @@
                 
             </div>
 
-            <div class="blocodetarefas" id="blocodetarefas"> 
-
+            <div class="blocodetarefasl" id="blocodetarefasl"> 
+                    
                 <div class="textotarefasfeitas" id="textotarefasfeitas">
 
                 </div>
 
-
-
-                <button class="botaolimpartarefa" type="submit"...
-                id="botaolimpar">Limpar lista >></button>
-
-    
             </div>
+
+            <div class="blocodetarefasr" id="blocodetarefasr"> 
+
+                <div class="statuscheck" id ="statuscheck">
+                    
+                </div>
+
+            </div>
+
+            <button class="botaolimpartarefa" type="submit"...
+            id="botaolimpar">Limpar lista >></button>
+
+
 
         </div>
 
@@ -91,11 +98,16 @@
 
                 var tarefasclear = tarefachecked.filter(function(){return true});
                 let itensfiltradoshtml = '';
+                let itemscheckados = '';
                 var b = ''
                 for(var j = 0; j < tarefasclear.length; j++){
                     itensfiltradoshtml += 
-                    `<div id="textotarefasfeitas">${tarefasclear[j]}:<input class="checkpos2" type="checkbox" id="idcheckboxresp" checked = "checked"></div>`
+                    `<div id="textotarefasfeitas">${tarefasclear[j]}:</div>`
+                    itemscheckados +=
+                    `<div class="statuscheck" id = "statuscheck"> <input class="checkpos2" type="checkbox" id="idcheckboxresp" checked = "checked"></div>`
+
                     document.getElementById("textotarefasfeitas").innerHTML = itensfiltradoshtml
+                    document.getElementById("statuscheck").innerHTML = itemscheckados
                 }
             }
 
@@ -114,10 +126,11 @@
                 e.preventDefault();
 
                 clearlista();
-
                 checkifchecked();
 
                 document.getElementById("textotarefasfeitas").innerHTML = null
+                document.getElementById("statuscheck").innerHTML = null
+
 
             }
         </script>
