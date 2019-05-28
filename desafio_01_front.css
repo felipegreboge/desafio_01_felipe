@@ -68,16 +68,16 @@ body{
 }
 
 .blocodetarefasr{
-    position: absolute;
+    position: relative;
     border: 3px solid rgb(0, 0, 0);
     font-size: 14px;
     text-align: right;
-    top: -161px;
-    right: -147.5px;
+    top: -155px;
+    right: -145px;
     color: #33313b;
     position: relative;
     margin: auto;
-    width: 65px;
+    width: 70px;
     height: 165px;
     border-radius:5px;
     background:#f6f5f5da;
@@ -107,7 +107,7 @@ body{
 
 .botaolimpartarefa{
     position: relative;
-    top: -155px;
+    top: -150px;
     left: 80px;
     width: 200px;
     text-align: center;

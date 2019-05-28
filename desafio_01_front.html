@@ -3,6 +3,7 @@
 <html lang="pt-br">
     
     <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <meta charset="utf-8">
         <title>Listagem de tarefas completas</title>
     </head>
@@ -25,19 +26,19 @@
 
             <div class="blocodetarefas"> 
 
-                Prova de Aerotermidinâmica:<input class="checkpos" type="checkbox" id="provaaero" name="provaaero" value="Prova de Aerotermidinâmica">
+                Prova de Aerotermidinâmica: <input class="form-check-checkpos" type="checkbox" id="provaaero" name="provaaero" value="Prova de Aerotermidinâmica">
                 <br>
-                Introdução do TCC:<input class="checkpos" type="checkbox" id="introtcc" name="introtcc" value="Introdução do TCC">
+                Introdução do TCC: <input class="form-check-checkpos" type="checkbox" id="introtcc" name="introtcc" value="Introdução do TCC">
                 <br>
-                Implementar Decolagem no Simulink:<input class="checkpos" type="checkbox" id="decolagem" name="decolagem" value="Implementar Decolagem no Simulink">
+                Implementar Decolagem no Simulink: <input class="form-check-checkpos" type="checkbox" id="decolagem" name="decolagem" value="Implementar Decolagem no Simulink">
                 <br>
-                Comprar café:<input class="checkpos" type="checkbox" id="cafe" name="cafe" value="Comprar café">
+                Comprar café: <input class="form-check-checkpos" type="checkbox" id="cafe" name="cafe" value="Comprar café">
                 <br>
-                Ler patch notes do POE:<input class="checkpos" type="checkbox" id="poepatch" name="poepatch" value="Ler patch notes do POE">
+                Ler patch notes do POE: <input class="form-check-checkpos" type="checkbox" id="poepatch" name="poepatch" value="Ler patch notes do POE">
                 <br>
-                Assistir episódio de Chernobyl:<input class="checkpos" type="checkbox" id="chernobyl" name="chernobyl" value="Assistir episódio de Chernobyl">
+                Assistir episódio de Chernobyl: <input class="form-check-checkpos" type="checkbox" id="chernobyl" name="chernobyl" value="Assistir episódio de Chernobyl">
                 <br>
-                Verificar investimentos:<input class="checkpos" type="checkbox" id="investimentos" name="investimentos" value="Verificar investimentos">
+                Verificar investimentos: <input class="form-check-checkpos" type="checkbox" id="investimentos" name="investimentos" value="Verificar investimentos">
                 <br>
 
                 <button class="botaoenviotarefa" type="submit" id="botaoenviotarefa">Listar tarefas concluídas >></button>
@@ -104,7 +105,7 @@
                     itensfiltradoshtml += 
                     `<div id="textotarefasfeitas">${tarefasclear[j]}:</div>`
                     itemscheckados +=
-                    `<div class="statuscheck" id = "statuscheck"> <input class="checkpos2" type="checkbox" id="idcheckboxresp" checked = "checked"></div>`
+                    `<div class="statuscheck" id = "statuscheck"> <input class="form-check-checkpos2" type="checkbox" id="idcheckboxresp" checked = "checked"></div>`
 
                     document.getElementById("textotarefasfeitas").innerHTML = itensfiltradoshtml
                     document.getElementById("statuscheck").innerHTML = itemscheckados
