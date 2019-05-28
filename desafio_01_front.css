@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Titillium+Web&display=swap');
+
+body{
+    background: -webkit-radial-gradient(center,
+     ellipse cover, #33313b 3%,#101011 99%);
+    font-size: 14px;
+    color: antiquewhite;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+.divtarefas{
+    margin: auto;
+    width: 440px;
+    height: 250px;
+    background: #c5a181ea;
+    border-radius: 10px;
+    border: 3px solid rgb(0, 0, 0)
+}
+
+.listatarefaheader{
+    border: 3px solid rgb(0, 0, 0);
+    font-size: 20px;
+    color: #33313b;
+    text-align: center;
+    top: 5px; 
+    position: relative;
+    margin: auto;
+    width: 420px;
+    height: 30px;
+    border-radius:5px;
+    background:#f6f5f5da;
+}
+
+.blocodetarefas{
+    position: absolute;
+    border: 3px solid rgb(0, 0, 0);
+    font-size: 14px;
+    text-align: right;
+    top: 10px;
+    color: #33313b;
+    position: relative;
+    margin: auto;
+    width: 420px;
+    height: 165px;
+    border-radius:5px;
+    background:#f6f5f5da;
+}
+
+.botaoenviotarefa{
+    position: absolute;
+    right: 25%;
+    top:105%;
+    width: 200px;
+    text-align: center;
+    background-color: #f6f5f5da;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 0px 10px;
+    color: #33313b;
+    font-size: 14px;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+}
+
+.botaoenviotarefa:hover{
+    background-color: #4CAF50;
+    color: #f6f5f5da;
+    box-shadow: 0 0px 0px 0 #33313b, 0 0px 20px 0 #33313b
+}
+
+.botaolimpartarefa{
+    position: absolute;
+    right: 25%;
+    top:105%;
+    width: 200px;
+    text-align: center;
+    background-color: #f6f5f5da;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 0px 10px;
+    color: #33313b;
+    font-size: 14px;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+}
+
+.botaolimpartarefa:hover{
+    background-color: rgb(175, 76, 76);
+    color: #f6f5f5da;
+    box-shadow: 0 0px 0px 0 #33313b, 0 0px 20px 0 #33313b
+}
+
+.checkpos{
+    width: 20px;
+    height: 15px;
+    padding: 0;
+    margin:0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+.textotarefasfeitas{
+    position: relative;
+    color: #33313b;
+    text-align: right;
+    right: 0px;
+}

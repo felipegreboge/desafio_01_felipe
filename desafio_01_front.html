@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Listagem de tarefas completas</title>
+    </head>
+    
+    <meta charset="utf-8">
+    <link href="./desafio_01_front.css" type="text/css" rel="stylesheet" />
+    
+    <body>
+
+
+
+        <div class="divtarefas">
+
+            <div class="listatarefaheader">
+
+                Lista de Tarefas:
+                
+            </div>
+
+
+            <div class="blocodetarefas"> 
+
+                Prova de Aerotermidinâmica:<input class="checkpos" type="checkbox" id="provaaero" name="provaaero" value="Prova de Aerotermidinâmica">
+                <br>
+                Introdução do TCC:<input class="checkpos" type="checkbox" id="introtcc" name="introtcc" value="Introdução do TCC">
+                <br>
+                Implementar Decolagem no Simulink:<input class="checkpos" type="checkbox" id="decolagem" name="decolagem" value="Implementar Decolagem no Simulink">
+                <br>
+                Comprar café:<input class="checkpos" type="checkbox" id="cafe" name="cafe" value="Comprar café">
+                <br>
+                Ler patch notes do POE:<input class="checkpos" type="checkbox" id="poepatch" name="poepatch" value="Ler patch notes do POE">
+                <br>
+                Assistir episódio de Chernobyl:<input class="checkpos" type="checkbox" id="chernobyl" name="chernobyl" value="Assistir episódio de Chernobyl">
+                <br>
+                Verificar investimentos:<input class="checkpos" type="checkbox" id="investimentos" name="investimentos" value="Verificar investimentos">
+                <br>
+
+                <button class="botaoenviotarefa" type="submit" id="botaoenviotarefa">Listar tarefas concluídas >></button>
+
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="divtarefas">
+
+            <div class="listatarefaheader">
+
+                Tarefas concluídas:
+                
+            </div>
+
+            <div class="blocodetarefas" id="blocodetarefas"> 
+
+                <div class="textotarefasfeitas" id="textotarefasfeitas">
+
+                </div>
+
+
+
+                <button class="botaolimpartarefa" type="submit"...
+                id="botaolimpar">Limpar lista >></button>
+
+    
+            </div>
+
+        </div>
+
+
+
+        <script>
+            
+            const elementid = ["provaaero", "introtcc", "decolagem", "cafe", "poepatch", "chernobyl", "investimentos"];
+
+            function checkifchecked(){
+
+                var tarefachecked = []
+
+                for(var i = 0; i < elementid.length; i++){
+                    var checkado = document.getElementById(elementid[i]).checked;
+                    if(checkado){
+                        tarefachecked[i] = document.getElementById(elementid[i]).value;
+                    }
+                }
+
+                var tarefasclear = tarefachecked.filter(function(){return true});
+                let itensfiltradoshtml = '';
+                var b = ''
+                for(var j = 0; j < tarefasclear.length; j++){
+                    itensfiltradoshtml += 
+                    `<div id="textotarefasfeitas">${tarefasclear[j]}<input class="checkpos2" type="checkbox" id="idcheckboxresp" checked = "checked"></div>`
+                    document.getElementById("textotarefasfeitas").innerHTML = itensfiltradoshtml
+                }
+            }
+
+            document.getElementById('botaoenviotarefa').onclick = (e)=>{
+                e.preventDefault();
+                checkifchecked();
+            }
+
+            function clearlista(){
+                for(var i = 0; i < elementid.length; i++){
+                    document.getElementById(elementid[i]).checked = false;
+                }
+            }
+
+            document.getElementById('botaolimpar').onclick = (e)=>{
+                e.preventDefault();
+
+                clearlista();
+
+                checkifchecked();
+
+                document.getElementById("textotarefasfeitas").innerHTML = null
+
+            }
+        </script>
+
+
+
+
+    </body>
+
+
+</html>
