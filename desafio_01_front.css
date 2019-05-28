@@ -3,7 +3,7 @@
 
 body{
     background: -webkit-radial-gradient(center,
-     ellipse cover, #33313b 3%,#101011 99%);
+        ellipse cover, #33313b 3%,#101011 99%);
     font-size: 14px;
     color: antiquewhite;
     font-family: 'Titillium Web', sans-serif;
@@ -14,7 +14,8 @@ body{
     margin: auto;
     width: 440px;
     height: 250px;
-    background: #c5a181ea;
+    background: -webkit-radial-gradient(center,
+        ellipse cover, rgb(124, 46, 46) 10%, rgb(229, 170, 170) 99%);
     border-radius: 10px;
     border: 3px solid rgb(0, 0, 0)
 }
