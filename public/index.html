@@ -3,13 +3,13 @@
 <html lang="pt-br">
     
     <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
         <title>Listagem de tarefas completas</title>
     </head>
     
     <meta charset="utf-8">
-    <link href="./desafio_01_front.css" type="text/css" rel="stylesheet" />
+    <link href="./style.css" type="text/css" rel="stylesheet" />
     
     <body>
 
@@ -21,29 +21,18 @@
 
                 Lista de Tarefas:
                 
+        </div>
+
+
+            <div class="blocodetarefas" id="blocodetarefas"> 
+
+               
+                
+
+                
             </div>
 
-
-            <div class="blocodetarefas"> 
-
-                Prova de Aerotermidinâmica: <input class="form-check-checkpos" type="checkbox" id="provaaero" name="provaaero" value="Prova de Aerotermidinâmica">
-                <br>
-                Introdução do TCC: <input class="form-check-checkpos" type="checkbox" id="introtcc" name="introtcc" value="Introdução do TCC">
-                <br>
-                Implementar Decolagem no Simulink: <input class="form-check-checkpos" type="checkbox" id="decolagem" name="decolagem" value="Implementar Decolagem no Simulink">
-                <br>
-                Comprar café: <input class="form-check-checkpos" type="checkbox" id="cafe" name="cafe" value="Comprar café">
-                <br>
-                Ler patch notes do POE: <input class="form-check-checkpos" type="checkbox" id="poepatch" name="poepatch" value="Ler patch notes do POE">
-                <br>
-                Assistir episódio de Chernobyl: <input class="form-check-checkpos" type="checkbox" id="chernobyl" name="chernobyl" value="Assistir episódio de Chernobyl">
-                <br>
-                Verificar investimentos: <input class="form-check-checkpos" type="checkbox" id="investimentos" name="investimentos" value="Verificar investimentos">
-                <br>
-
-                <button class="botaoenviotarefa" type="submit" id="botaoenviotarefa">Listar tarefas concluídas >></button>
-
-            </div>
+            <button class="botaoenviotarefa" type="submit" id="botaoenviotarefa">Listar tarefas concluídas >></button>
 
         </div>
 
@@ -76,6 +65,15 @@
             <button class="botaolimpartarefa" type="submit"...
             id="botaolimpar">Limpar lista >></button>
 
+        <div class="novatarefaform">
+
+            <form id="forminput" class="forminput"> 
+
+                <input type="text" id="inputdetexto" class ="inputdetexto" placeholder="Nova Atividade Aqui!">
+                <br>
+                <button class="botaoenviotarefanova" type="submit" id="botaoenvionovatarefa">Adicionar Nova Tarefa >></button>
+            </form>
+        </div>
 
 
         </div>
@@ -84,7 +82,27 @@
 
         <script>
             
-            const elementid = ["provaaero", "introtcc", "decolagem", "cafe", "poepatch", "chernobyl", "investimentos"];
+            var elementid = [];
+
+            var eletest1 = [];
+
+            function criartarefa(){
+                let newtarefa =""
+                newtarefa = document.getElementById("inputdetexto").value
+                console.log(newtarefa)
+                elementid.push(newtarefa)
+                console.log(elementid)
+
+                for(var kk = 0; kk < elementid.length; kk++){
+                eletest1[kk] = `${elementid[kk]}:<input class="form-check-checkpos" 
+                type="checkbox" id="${elementid[kk]}" name="${elementid[kk]}" value="${elementid[kk]}"><br>`
+            
+                console.log(eletest1)
+                
+                }
+                document.getElementById("blocodetarefas").innerHTML = eletest1
+                
+            }
 
             function checkifchecked(){
 
@@ -105,11 +123,16 @@
                     itensfiltradoshtml += 
                     `<div id="textotarefasfeitas">${tarefasclear[j]}:</div>`
                     itemscheckados +=
-                    `<div class="statuscheck" id = "statuscheck"> <input class="form-check-checkpos2" type="checkbox" id="idcheckboxresp" checked = "checked"></div>`
+                    `<div class="statuscheck" id = "statuscheck"> <input class="form-check-checkpos2" type="checkbox" id="idcheckboxresp" checked = "checked"></div><br>`
 
                     document.getElementById("textotarefasfeitas").innerHTML = itensfiltradoshtml
                     document.getElementById("statuscheck").innerHTML = itemscheckados
                 }
+            }
+
+            document.getElementById('botaoenvionovatarefa').onclick = (e)=>{
+                e.preventDefault();
+                criartarefa();
             }
 
             document.getElementById('botaoenviotarefa').onclick = (e)=>{
@@ -131,6 +154,7 @@
 
                 document.getElementById("textotarefasfeitas").innerHTML = null
                 document.getElementById("statuscheck").innerHTML = null
+                document.getElementById("blocodetarefas").innerHTML = null
 
 
             }

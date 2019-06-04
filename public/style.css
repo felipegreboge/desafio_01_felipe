@@ -12,7 +12,7 @@ body{
 
 .divtarefas{
     margin: auto;
-    width: 380px;
+    width: 360px;
     height: 250px;
     background: -webkit-radial-gradient(center,
         ellipse cover, rgb(253, 186, 142) 3%, rgb(255, 137, 69) 95%);
@@ -28,7 +28,7 @@ body{
     top: 5px; 
     position: relative;
     margin: auto;
-    width: 360px;
+    width: 340px;
     height: 30px;
     border-radius:5px;
     background:#f6f5f5da;
@@ -43,7 +43,7 @@ body{
     color: #33313b;
     position: relative;
     margin: auto;
-    width: 360px;
+    width: 340px;
     height: 165px;
     border-radius:5px;
     background:#f6f5f5da;
@@ -59,7 +59,7 @@ body{
     color: #33313b;
     position: relative;
     margin: auto;
-    width: 280px;
+    width: 260px;
     height: 165px;
     border-radius:5px;
     background:#f6f5f5da;
@@ -72,8 +72,8 @@ body{
     border: 3px solid rgb(0, 0, 0);
     font-size: 14px;
     text-align: right;
-    top: -155px;
-    right: -145px;
+    top: -162px;
+    right: -135px;
     color: #33313b;
     position: relative;
     margin: auto;
@@ -85,8 +85,8 @@ body{
 
 .botaoenviotarefa{
     position: absolute;
-    right: 25%;
-    top:105%;
+    right: 42.5%;
+    top:232.5px;
     width: 200px;
     text-align: center;
     background-color: #f6f5f5da;
@@ -107,7 +107,7 @@ body{
 
 .botaolimpartarefa{
     position: relative;
-    top: -150px;
+    top: -155px;
     left: 80px;
     width: 200px;
     text-align: center;
@@ -212,4 +212,58 @@ body{
     vertical-align: top;
     position: middle;
     right: 10px;
+}
+
+.novatarefaform{
+    margin: auto;
+    width: 360px;
+    height: 80px;
+    position: relative;
+    top: -130px;
+    background: -webkit-radial-gradient(center,
+        ellipse cover, rgb(253, 186, 142) 3%, rgb(255, 137, 69) 95%);
+    border-radius: 10px;
+    align-content: center;
+    border: 3px solid rgb(0, 0, 0)
+}
+
+.forminput{
+    top: 10px;
+    right: 0px;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+}
+
+.inputdetexto{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid rgb(0, 0, 0)
+}
+
+.botaoenviotarefanova{
+    position: absolute;
+    right: 25%;
+    top:32px;
+    width: 200px;
+    right: 80px;
+    text-align: center;
+    background-color: #f6f5f5da;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 0px 10px;
+    color: #33313b;
+    font-size: 14px;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+
+}
+
+.botaoenviotarefanova:hover{
+    background-color: rgb(37, 201, 42);
+    color: #f6f5f5da;
+    box-shadow: 0 0px 0px 0 #33313b, 0 0px 20px 0 #33313b
 }
